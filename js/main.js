@@ -51,14 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function moveObstacle() {
       obstacleLeft -= 2
       obstacle.style.left = obstacleLeft + 'px'
+      topObstacle.style.left = obstacleLeft + 'px'
 
       if (obstacleLeft === -60) {
         clearInterval(timerId)
         gameDisplay.removeChild(obstacle)
+        gameDisplay.removeChild(topObstacle)
       }
       if (
         obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
-        birdBottom < obstacleBottom + 152 || birdBottom === 0
+        (birdBottom < obstacleBottom + 152 || birdBottom > obstacleBottom + gap -210) || birdBottom === 0
         ) {
         gameOver()
         clearInterval(timerId)
