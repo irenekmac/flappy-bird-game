@@ -2,7 +2,7 @@
 
 ---
 
-Second project to learn and get familiar with Python syntax.
+Second project to learn and get familiar with JavaScript ES6 syntax.
 
 
 ###### Languages used:
